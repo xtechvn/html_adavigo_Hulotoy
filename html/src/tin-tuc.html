@@ -1,0 +1,43 @@
+<section class="section-news">
+    <div class="container">
+
+        <div class="wrap-news">
+            <div class="content">
+                <div class="list-news-top list-news">
+                    <div class="top-news">
+                        @@include('partial/item-news.html')
+                    </div>
+                    <ul class="list-cat">
+                        <li> <a href="" class="cat-tag cat-tatca">Tất cả</a></li>
+                        <li> <a href="" class="cat-tag cat-moinhat">Mới nhất</a></li>
+                        <li> <a href="" class="cat-tag cat-dochoi active">Đồ chơi</a></li>
+                        <li> <a href="" class="cat-tag cat-goiy">Gợi ý </a></li>
+                        <li> <a href="" class="cat-tag cat-chamtre">Chăm trẻ </a></li>
+                    </ul>
+                </div>
+                <div class="list-news">
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                </div>
+                <div class="wrap-paging">
+                    <a href="" class="xemthem">Xem thêm</a>
+                    <ul class="pagination">
+                        <li class="page first"><a href=""><i class="icon icon-page-first"></i></a></li>
+                        <li class="page previous disabled"><a href=""><i class="icon icon-page-previous"></i></a></li>
+                        <li class="page active"><a href="">1</a></li>
+                        <li class="page"><a href="">2</a></li>
+                        <li class="page"><a href="">...</a></li>
+                        <li class="page"><a href="">3</a></li>
+                        <li class="page next"><a href=""><i class="icon icon-page-next"></i></a></li>
+                        <li class="page last"><a href=""><i class="icon icon-page-last"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            @@include('partial/sidebar-news.html')
+        </div>
+    </div>
+</section>
