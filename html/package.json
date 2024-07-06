@@ -1,0 +1,24 @@
+{
+  "name": "css-gulp",
+  "version": "1.0.0",
+  "description": "Setting up a CSS build process with Gulp 4",
+  "main": "index.js",
+  "repository": "https://github.com/93lucasp/css-gulp.git",
+  "author": "Luca Spezzano <spezzanoluca@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-index": "^0.2.0",
+    "gulp-wrap": "^0.15.0",
+    "gulp-file-include": "^2.3.0"
+  },
+  "dependencies": {
+    "sass": "^1.77.6"
+  }
+}

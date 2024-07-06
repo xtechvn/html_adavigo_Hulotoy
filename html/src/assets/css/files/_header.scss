@@ -1,0 +1,206 @@
+.header {
+    .topbar {
+        background: #1F2549;
+        font-size: 13px;
+        padding: 10px 0;
+
+        * {
+            color: #FCFCFC;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrap_topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            @media (max-width:991px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        .left_topbar {
+            display: flex;
+            gap: 20px;
+
+            @media (max-width:767px) {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+        }
+
+        .right_topbar {
+            @media (max-width:767px) {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .mainheader {
+        background: #343E7A;
+        padding: 20px 0;
+        font-size: 16px;
+
+        * {
+            color: #FCFCFC;
+        }
+
+        .wrap_mainheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+
+            @media (max-width:767px) {
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                max-width: 260px;
+
+                @media (max-width:767px) {
+                    max-width: 45%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .form-search {
+                width: 100%;
+                max-width: 860px;
+                position: relative;
+
+                @media (max-width:767px) {
+                    order: 3;
+                }
+
+                input {
+                    width: 100%;
+                    background: #FCFCFC;
+                    padding: 4px 80px 4px 24px;
+                    font-size: 16px;
+                    height: 48px;
+                    line-height: 48px;
+                    color: #1F2549;
+                    border: none;
+                    outline: none;
+                    border-radius: 24px;
+
+                    @media (max-width:767px) {
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+
+                .btn-search {
+                    background: #FD5023;
+                    border-radius: 24px;
+                    position: absolute;
+                    right: 4px;
+                    width: 70px;
+                    padding: 0;
+                    text-align: center;
+                    top: 4px;
+
+                    @media (max-width:767px) {
+                        height: 36px;
+                        width: 36px;
+                        line-height: 36px;
+                        top: 2px;
+                        right: 2px;
+                    }
+
+                    i {
+                        margin: auto;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .right-mainheader {
+                margin-top: -5px;
+
+                @media (max-width:767px) {
+                    max-width: 53%;
+                }
+
+                @media (max-width:991px) {
+                    margin-top: 0;
+                }
+
+                .icon {
+                    width: 32px;
+                    height: 32px;
+                    margin: auto;
+                    margin-bottom: 5px;
+
+                    @media (max-width:767px) {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .list-action {
+                    display: flex;
+                    gap: 15px;
+                    text-align: center;
+                    align-items: start;
+                    position: relative;
+
+                    .badge {
+                        position: absolute;
+                        right: calc(50% - 3px);
+                        top: -5px;
+                        background: #FD5023;
+                        width: 16px;
+                        height: 16px;
+                        font-weight: bold;
+                        font-size: 10px;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 16px;
+
+                        @media (max-width:991px) {
+                            right: -5px;
+
+                        }
+                    }
+
+                    a {
+                        text-align: center;
+                        position: relative;
+                        line-height: 140%;
+
+                        .name {
+                            white-space: nowrap;
+                        }
+
+                        @media (max-width:1023px) {
+                            .name {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

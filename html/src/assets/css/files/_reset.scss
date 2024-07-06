@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background: #F5F5F5;
+    color: #1F2549;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 16px;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1F2549;
+}
+
+input {
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    border: none;
+    outline: none;
+    color: #1F2549;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.form-control {
+    border-radius: 24px;
+    border: 1px solid #EBEBEB;
+}
+
+button,
+.btn {
+    border: none;
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1710px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrap-paging {
+    margin: 40px 0;
+    margin-left: auto;
+
+    @media (max-width:767px) {
+        margin: 20px;
+    }
+
+    .pagination {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: end;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+
+        .page {
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #FCFCFC;
+            box-shadow: 0px 4px 30px 0px #3629B712;
+            box-shadow: 4px 0px 8px 0px #3629B714;
+            border-radius: 50%;
+
+            a {
+                color: #2A3262;
+                display: block;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                padding: 8px;
+            }
+
+            &.active {
+                background: #2A3262;
+
+                a {
+                    color: #fff
+                }
+
+            }
+
+            &.disabled {
+                opacity: 0.6;
+            }
+
+
+        }
+    }
+
+    .xemthem {
+        width: 100%;
+        background: #1F2549;
+        color: #FCFCFC;
+        text-align: center;
+        height: 40px;
+        border-radius: 24px;
+        line-height: 40px;
+        display: none;
+
+        @media (max-width:767px) {
+            display: block;
+        }
+    }
+}
+
+// popup
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(36, 36, 36, 0.4);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+.popup {
+    margin: 70px auto;
+    padding: 40px;
+    background: #FCFCFC;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 690px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+    @media (max-width:767px) {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: all 200ms;
+    }
+
+}
