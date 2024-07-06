@@ -87,3 +87,18 @@ $(function () {
         $('#productList').removeClass('show-filter');
     });
 });
+
+// gallery
+var swiperSmallThumb = new Swiper(".thumb-small", {
+    spaceBetween: 15,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiperBigThumb = new Swiper(".thumb-big", {
+    spaceBetween: 15,
+    navigation: false,
+    thumbs: {
+        swiper: swiperSmallThumb,
+    },
+});

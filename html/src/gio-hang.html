@@ -1,0 +1,174 @@
+<section class="section-cart">
+    <div class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="">Trang chủ</a></li>
+                <li class="active"><a href="">Giỏ hàng / Thanh toán</a></li>
+            </ul>
+        </div>
+        <div class="box-cart">
+            <div class="list-addtocart">
+                <div class="shopping-cart">
+
+                    <div class="column-labels">
+                        <label class="product-image">Tên sản phẩm (2 sản phẩm)</label>
+                        <label class="product-price">Đơn giá</label>
+                        <label class="product-quantity">Số lượng</label>
+                        <label class="product-line-price">Thành tiền</label>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Gấu Bông Mèo Hoàng Thượng Cosplay, Thú Nhồi Bông An Toàn Cho Bé
+                            </div>
+                            <p class="product-description">Phân loại: Gấu trúc, Kích thước: 60cm</p>
+                        </div>
+                        <div class="product-price">32.00</div>
+                        <div class="product-quantity">
+                            <div class="number-input">
+                                <button
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                            </div>
+                        </div>
+
+                        <div class="product-line-price">25.000</div>
+                        <div class="product-removal">
+                            <button class="remove-product">
+                                Xóa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-cart">
+                <div class="address">
+                    <h4 class="name">Phạm ái phương | 098878779</h4>
+                    <p class="add">Tầng 5, tòa nhà Diamond Flower, số 1 Hoàng Đạo Thúy, Hà Nội</p>
+                    <div class="delivery">
+                        <span class="tt">Hình thức giao hàng:</span>
+                        <div class="select-delivery">
+                            <span class="tt">Giao hàng nhanh</span>
+                            <ul class="list-delivery">
+                                <li class="item">
+                                    <div class="choose">
+                                        <input class="checkbox" type="checkbox"><label>Lấy tại cửa hàng</label>
+                                    </div>
+                                    <div class="price-ship">0đ</div>
+                                </li>
+                                <li class="item">
+                                    <div class="choose">
+                                        <input class="checkbox" type="checkbox"><label>Hỏa tốc</label>
+                                    </div>
+                                    <div class="price-ship">0đ</div>
+                                </li>
+                                <li class="item">
+                                    <div class="choose">
+                                        <input class="checkbox" type="checkbox"><label>Giao nhanh</label>
+                                    </div>
+                                    <div class="price-ship">0đ</div>
+                                </li>
+                                <li class="item">
+                                    <div class="choose">
+                                        <input class="checkbox" type="checkbox"><label>Giao tiết kiệm</label>
+                                    </div>
+                                    <div class="price-ship">0đ</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="voucher">
+                    <div class="box-tt">
+                        <h4 class="tt">Mã voucher</h4>
+                        <a href="" class="choose-voucher">Chọn hoặc nhập mã Khuyễn mãi khác</a>
+                    </div>
+                    <div class="voucher-add">
+                        <div class="img"><img src="./assets/images/voucher.png" alt="" /></div>
+                        <div class="info">
+                            <h4 class="name">Giảm đậm gơn 20%<i class="icon icon-info"> </i></h4>
+
+                        </div>
+                        <a href="" class="remove-voucher">Bỏ chọn</a>
+                    </div>
+                </div>
+                <div class="pay">
+                    <span class="tt">Phương thức thanh toán:</span>
+                    <div class="select-delivery">
+                        <span class="tt">Chuyển khoản qua ngân hàng </span>
+                        <ul class="list-delivery">
+                            <li class="item">
+                                <div class="choose">
+                                    <input class="checkbox" type="checkbox"><label>Thanh toán khi nhận hàng
+                                        (COD)</label>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="choose">
+                                    <input class="checkbox" type="checkbox"><label>Chuyển khoản qua ngân hàng</label>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="choose">
+                                    <input class="checkbox" type="checkbox"><label>Thanh toán QR-PAY/label>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="choose">
+                                    <input class="checkbox" type="checkbox"><label>Thẻ Visa - Master Card</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="totel-cart">
+                    <div class="flex-total">
+                        <div class="tt">Tiền hàng</div>
+                        <div class="pr">3.000.000đ</div>
+                    </div>
+                    <div class="flex-total">
+                        <div class="tt">Phí vận chuyển</div>
+                        <div class="pr">30.000đ</div>
+                    </div>
+                    <div class="flex-total">
+                        <div class="tt">Giảm giá</div>
+                        <div class="pr">-3.000đ</div>
+                    </div>
+                    <div class="bt-total">
+                        <div class="flex-total">
+                            <div class="tt">Tổng tiền</div>
+                            <div class="pr">3.000.000đ</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn btn-base btn-confirm">XÁC NHẬN THANH TOÁN</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-category">
+    <div class="container">
+        <div class="list-product-category">
+            <div class="title-box">
+                <h3 class="name-tt"><a href="">ĐÃ XEM GẦN ĐÂY</a></h3>
+                <a href="" class="xemthem">Xem thêm</a>
+            </div>
+            <div class="product-category">
+                <div class="list-product scroll-product">
+                    @@include('partial/product.html')
+                    @@include('partial/product.html')
+                    @@include('partial/product.html')
+                    @@include('partial/product.html')
+                    @@include('partial/product.html')
+                    @@include('partial/product.html')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
