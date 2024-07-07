@@ -65,7 +65,7 @@ button,
     border: none;
     outline: none;
     height: 40px;
-    line-height: 40px;
+    line-height: 38px;
     cursor: pointer;
     text-align: center;
     padding: 0 10px;
@@ -257,7 +257,9 @@ button,
 .section-category,
 .section-banner,
 .section-product,
-.section-news {
+.section-details-product,
+.section-news,
+.section-description-product {
     margin-top: 40px;
     margin-bottom: 40px;
 
@@ -573,7 +575,6 @@ button,
     }
 
     input[type=number] {
-        font-family: sans-serif;
         padding: 5px;
         border: solid #E8E8E8;
         border-width: 0 1px;
@@ -591,8 +592,9 @@ button,
         justify-content: center;
         height: 36px;
         cursor: pointer;
+        padding: 0 5px;
         margin: 0;
-        width: 30px;
+        width: 24px;
         position: relative;
         border-radius: 4px 0 0 4px;
 
