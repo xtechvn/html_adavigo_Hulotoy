@@ -83,9 +83,12 @@ $(function () {
     $('.btn-filter').on('click', function () {
         $('#productList').addClass('show-filter');
     });
-    $('#closeFilter').on('click', function () {
-        $('#productList').removeClass('show-filter');
-    });
+    // $('#closeFilter').on('click', function () {
+    //     $('#productList').removeClass('show-filter');
+    // });
+    // $('.select-delivery, .select-bank').on('click', function () {
+    //     $(this).toggleClass('active');
+    // });
 });
 
 // gallery
