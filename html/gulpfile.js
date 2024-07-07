@@ -74,7 +74,5 @@ function buildIndex() {
 };
 gulp.watch('./src/assets/css/**/*.scss', css);
 gulp.watch('./src/*.html', html).on('change', browserSync.reload);
-gulp.task('watch', function () {
-    watch('./src/*.html', gulp.series(gulp.task('html')))
-});
+
 exports.default = gulp.parallel(html, css, serve, buildIndex);
