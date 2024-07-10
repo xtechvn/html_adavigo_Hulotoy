@@ -1,0 +1,30 @@
+Để Jenkins tự động build khi có commit mới vào Git, bạn có thể cấu hình Webhook trong Git repository và thiết lập job trong Jenkins để kích hoạt build khi nhận được thông báo webhook. Dưới đây là các bước chi tiết để thực hiện điều này:
+
+1. Thiết lập Webhook trong GitHub
+Truy cập Repository trên GitHub:
+
+Mở repository của bạn trên GitHub.
+Thiết lập Webhook:
+
+Vào Settings > Webhooks.
+Click vào Add webhook.
+Cấu hình Webhook:
+
+Payload URL: Nhập URL của Jenkins với đường dẫn webhook. Ví dụ: http://your-jenkins-server/github-webhook/.
+Content type: Chọn application/json.
+Which events would you like to trigger this webhook?: Chọn Just the push event.
+Click Add webhook.
+2. Cấu hình Job trong Jenkins
+Tạo hoặc chỉnh sửa một job mới:
+
+Vào Jenkins, chọn New Item để tạo một job mới hoặc chọn một job hiện có.
+Cấu hình SCM:
+
+Trong cấu hình của job, dưới mục Source Code Management, chọn Git.
+Nhập URL của repository Git của bạn và cung cấp các thông tin cần thiết khác như credentials.
+Cấu hình Triggers:
+
+Trong phần Build Triggers, chọn GitHub hook trigger for GITScm polling.
+Lưu cấu hình:
+
+Lưu lại cấu hình của job.
