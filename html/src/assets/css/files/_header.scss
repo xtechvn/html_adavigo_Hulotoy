@@ -134,7 +134,7 @@
                     position: absolute;
                     width: 100%;
                     top: 100%;
-                    z-index: 1;
+                    z-index: 9;
                     padding: 10px;
                     box-shadow: 4px 0 8px 0 rgba(54, 41, 183, .0784313725);
                     border-radius: 16px;
@@ -232,7 +232,7 @@
 
                     .badge {
                         position: absolute;
-                        right: calc(50% - 3px);
+                        right: calc(50% - 20px);
                         top: -5px;
                         background: #FD5023;
                         width: 16px;
@@ -252,7 +252,6 @@
 
                     a {
                         text-align: center;
-                        position: relative;
                         line-height: 140%;
                         font-size: 13px;
                         color: #fff;
