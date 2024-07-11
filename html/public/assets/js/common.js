@@ -155,5 +155,8 @@ $('select').each(function () {
         $styledSelect.removeClass('active');
         $list.hide();
     });
+});
 
+$(function () {
+    $("#datepicker").datepicker();
 });
