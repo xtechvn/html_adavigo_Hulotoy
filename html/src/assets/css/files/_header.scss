@@ -143,6 +143,7 @@
                     .list-product-recomment {
                         overflow-y: auto;
                         max-height: 360px;
+                        padding-right: 10px;
 
                         &::-webkit-scrollbar {
                             width: 5px;
