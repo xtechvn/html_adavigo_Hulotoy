@@ -160,3 +160,19 @@ $('select').each(function () {
 $(function () {
     $("#datepicker").datepicker();
 });
+function scrollTop() {
+    if ($(window).scrollTop() > 500) {
+        $(".backToTopBtn").addClass("active");
+    } else {
+        $(".backToTopBtn").removeClass("active");
+    }
+}
+$(function () {
+    scrollTop();
+    $(window).on("scroll", scrollTop);
+
+    $(".backToTopBtn").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 1);
+        return false;
+    });
+});
