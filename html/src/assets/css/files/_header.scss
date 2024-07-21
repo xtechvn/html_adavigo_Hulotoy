@@ -130,11 +130,18 @@
                     }
                 }
 
+                &.active {
+                    .box-search-list {
+                        display: block;
+                    }
+                }
+
                 .box-search-list {
                     position: absolute;
                     width: 100%;
                     top: 100%;
                     z-index: 9;
+                    display: none;
                     padding: 10px;
                     box-shadow: 4px 0 8px 0 rgba(54, 41, 183, .0784313725);
                     border-radius: 16px;
