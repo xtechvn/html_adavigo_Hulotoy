@@ -1,25 +1,51 @@
 <section class="section-news">
     <div class="container">
-
         <div class="wrap-news">
             <div class="content">
+                <ul class="list-cat">
+                    <li> <a href="" class="cat-tag">Tất cả</a></li>
+                    <li> <a href="" class="cat-tag">Mới nhất</a></li>
+                    <li> <a href="" class="cat-tag active">Đồ chơi</a></li>
+                    <li> <a href="" class="cat-tag">Gợi ý </a></li>
+                    <li> <a href="" class="cat-tag">Chăm trẻ </a></li>
+                </ul>
+                <div class="form-search">
+                    <form>
+                        <input type="text" placeholder="Tìm kiếm tin...">
+                        <button type="button" class="btn-search"><i class="icon icon-search"></i></button>
+                    </form>
+                </div>
                 <div class="list-news-top list-news">
                     <div class="top-news">
                         @@include('partial/item-news.html')
                     </div>
-                    <ul class="list-cat">
-                        <li> <a href="" class="cat-tag cat-tatca">Tất cả</a></li>
-                        <li> <a href="" class="cat-tag cat-moinhat">Mới nhất</a></li>
-                        <li> <a href="" class="cat-tag cat-dochoi active">Đồ chơi</a></li>
-                        <li> <a href="" class="cat-tag cat-goiy">Gợi ý </a></li>
-                        <li> <a href="" class="cat-tag cat-chamtre">Chăm trẻ </a></li>
-                    </ul>
                 </div>
+            </div>
+            <div class="top-siderbar-news">
+                <div class="form-search">
+                    <form>
+                        <input type="text" placeholder="Tìm kiếm tin...">
+                        <button type="button" class="btn-search"><i class="icon icon-search"></i></button>
+                    </form>
+                </div>
+                <div class="list-news">
+                    @@include('partial/item-news.html')
+                    @@include('partial/item-news.html')
+                </div>
+            </div>
+        </div>
+        <div class="wrap-news">
+            <div class="content">
                 <div class="list-news">
                     @@include('partial/item-news.html')
                     @@include('partial/item-news.html')
                     @@include('partial/item-news.html')
                     @@include('partial/item-news.html')
+                    <div class="banner-ads-full">
+                        <a href="">
+                            <img src="assets/images/ads.jpg" alt="" />
+                        </a>
+                    </div>
                     @@include('partial/item-news.html')
                     @@include('partial/item-news.html')
                 </div>
