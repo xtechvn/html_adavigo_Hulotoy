@@ -645,6 +645,30 @@ button,
 
 }
 
+.placeholder {
+
+    position: relative;
+    background: #222222;
+    opacity: 0.1;
+    animation: fading 1.5s infinite;
+    border-radius: 4px;
+    font-size: 0 !important;
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0.1;
+    }
+
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
 .number-input {
     border: 1px solid #E8E8E8;
     display: inline-flex;
