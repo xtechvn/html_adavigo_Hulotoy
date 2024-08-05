@@ -11,8 +11,8 @@
     }
 
     .topfooter {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: end;
         gap: 25px;
@@ -22,6 +22,8 @@
         }
 
         .logo {
+            max-width: 500px;
+
             img {
                 width: 100%;
                 max-width: 260px;
@@ -58,6 +60,8 @@
         }
 
         .address {
+            max-width: 480px;
+
             ul {
                 li {
                     display: flex;
@@ -77,8 +81,9 @@
 
     .midfooter {
         margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 25px;
         font-size: 16px;
         font-weight: 400;
@@ -95,11 +100,32 @@
         li {
             margin-bottom: 15px;
         }
+
+        .flex-col {
+            display: flex;
+            justify-content: space-between;
+
+            ul {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    display: inline-block;
+                    padding: 0 10px;
+
+                    @media (max-width:640px) {
+                        padding: 0;
+                    }
+                }
+            }
+        }
     }
 
     .bottomfooter {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
         margin-top: 40px;
         gap: 25px;
 
@@ -140,7 +166,8 @@
 
         .flex-col {
             display: flex;
-            justify-content: space-between;
+            justify-content: end;
+            margin-bottom: 15px;
 
             ul {
                 display: flex;

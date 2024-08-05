@@ -71,13 +71,9 @@
 
 .list-product {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 24px;
 
-    @media (max-width:1680px) {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 15px;
-    }
 
     @media (max-width:1200px) {
         grid-template-columns: repeat(4, 1fr);
@@ -312,6 +308,7 @@
 .section-categories {
     .swiper-slide {
         height: initial;
+        padding: 10px 0;
     }
 
     .title-box {
@@ -336,7 +333,8 @@
         box-shadow: 0px 4px 30px 0px #3629B712;
         box-shadow: 4px 0px 8px 0px #3629B714;
         background: #FCFCFC;
-        padding: 16px 10px;
+        padding: 5px 10px;
+        border-radius: 16px;
         height: 100%;
         transition: all 0.5s ease-in-out;
 
@@ -346,8 +344,8 @@
     }
 
     .thumb-category {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         margin: auto;
 
         img {
@@ -1027,7 +1025,6 @@
 
 
         }
-
     }
 }
 
@@ -1040,7 +1037,8 @@
         font-size: 16px;
     }
 
-    input {
+    input,
+    textarea {
         width: 100%;
 
 
@@ -1075,10 +1073,18 @@
     .box-input {
         position: relative;
 
-        input {
-
+        input,
+        textarea {
             padding-left: 40px;
 
+            &::placeholder {
+                font-family: Inter, sans-serif;
+                font-size: 16px;
+            }
+        }
+
+        textarea {
+            padding-top: 10px;
         }
 
         &.email,
@@ -1105,6 +1111,19 @@
                 left: 10px;
                 top: 10px;
                 background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5253 4.30593C13.5508 4.21075 13.5947 4.12151 13.6547 4.04333C13.7147 3.96514 13.7894 3.89954 13.8748 3.85026C13.9601 3.80098 14.0543 3.769 14.152 3.75614C14.2496 3.74328 14.3489 3.74979 14.4441 3.77531C15.8344 4.13807 17.103 4.86491 18.119 5.88096C19.1351 6.89702 19.8619 8.16556 20.2247 9.55593C20.2502 9.6511 20.2567 9.75036 20.2439 9.84805C20.231 9.94573 20.199 10.0399 20.1497 10.1252C20.1005 10.2106 20.0349 10.2853 19.9567 10.3453C19.8785 10.4053 19.7893 10.4492 19.6941 10.4747C19.6307 10.4913 19.5655 10.4998 19.5 10.5C19.3347 10.5 19.1741 10.4454 19.043 10.3447C18.912 10.244 18.8179 10.1028 18.7753 9.94312C18.4795 8.80811 17.8863 7.77253 17.0569 6.94314C16.2275 6.11375 15.1919 5.52054 14.0569 5.22468C13.9616 5.19932 13.8723 5.15543 13.794 5.09552C13.7157 5.0356 13.65 4.96084 13.6006 4.87551C13.5513 4.79018 13.5192 4.69595 13.5063 4.59822C13.4933 4.50048 13.4998 4.40116 13.5253 4.30593ZM13.3069 8.22468C14.5997 8.56968 15.4303 9.40031 15.7753 10.6931C15.8179 10.8528 15.912 10.994 16.043 11.0947C16.1741 11.1954 16.3347 11.25 16.5 11.25C16.5655 11.2498 16.6307 11.2413 16.6941 11.2247C16.7893 11.1992 16.8785 11.1553 16.9567 11.0953C17.0349 11.0353 17.1005 10.9606 17.1497 10.8752C17.199 10.7899 17.231 10.6957 17.2439 10.598C17.2567 10.5004 17.2502 10.4011 17.2247 10.3059C16.7447 8.50968 15.4903 7.25531 13.6941 6.77531C13.5019 6.72396 13.2971 6.75107 13.1249 6.85067C12.9527 6.95027 12.8271 7.1142 12.7758 7.3064C12.7244 7.4986 12.7516 7.70332 12.8512 7.87553C12.9508 8.04774 13.1147 8.17334 13.3069 8.22468ZM20.9888 17.1637C20.8216 18.4341 20.1977 19.6001 19.2337 20.4441C18.2696 21.2881 17.0313 21.7523 15.75 21.75C8.30626 21.75 2.25001 15.6937 2.25001 8.24999C2.24771 6.9687 2.7119 5.73039 3.55588 4.76633C4.39986 3.80228 5.56592 3.17841 6.83626 3.01124C7.1575 2.97202 7.4828 3.03774 7.76362 3.19859C8.04444 3.35945 8.2657 3.6068 8.39438 3.90374L10.3744 8.32406V8.33531C10.4729 8.56261 10.5136 8.81077 10.4928 9.05763C10.472 9.30449 10.3904 9.54236 10.2553 9.74999C10.2384 9.77531 10.2206 9.79874 10.2019 9.82218L8.25001 12.1359C8.9522 13.5628 10.4447 15.0422 11.8903 15.7462L14.1722 13.8047C14.1946 13.7858 14.2181 13.7683 14.2425 13.7522C14.45 13.6138 14.6887 13.5293 14.937 13.5064C15.1853 13.4835 15.4354 13.5229 15.6647 13.6209L15.6769 13.6266L20.0934 15.6056C20.3909 15.7338 20.6389 15.9549 20.8003 16.2358C20.9616 16.5166 21.0278 16.8422 20.9888 17.1637ZM19.5 16.9762C19.5 16.9762 19.4934 16.9762 19.4897 16.9762L15.0834 15.0028L12.8006 16.9444C12.7785 16.9631 12.7553 16.9807 12.7313 16.9969C12.5154 17.1409 12.2659 17.2264 12.0071 17.2452C11.7483 17.2639 11.489 17.2152 11.2547 17.1037C9.49876 16.2553 7.74845 14.5181 6.89907 12.7809C6.7866 12.5483 6.73613 12.2906 6.75255 12.0327C6.76898 11.7748 6.85174 11.5255 6.99282 11.3091C7.00872 11.2836 7.02659 11.2595 7.04626 11.2369L9.00001 8.92031L7.03126 4.51406C7.03089 4.51032 7.03089 4.50655 7.03126 4.50281C6.12212 4.6214 5.28739 5.06733 4.68339 5.7571C4.0794 6.44687 3.74755 7.33316 3.75001 8.24999C3.75348 11.4315 5.01888 14.4818 7.26856 16.7314C9.51825 18.9811 12.5685 20.2465 15.75 20.25C16.6663 20.2531 17.5523 19.9225 18.2425 19.3198C18.9327 18.7171 19.3797 17.8837 19.5 16.9753V16.9762Z" fill="%23343E7A"/></svg>') no-repeat left;
+            }
+        }
+
+        &.content {
+            &::before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                background: url("data:image/svg+xml,%3csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.3113 4.87846L14.1216 0.689705C13.9823 0.550381 13.8169 0.439861 13.6349 0.364458C13.4529 0.289054 13.2578 0.250244 13.0608 0.250244C12.8638 0.250244 12.6687 0.289054 12.4867 0.364458C12.3047 0.439861 12.1393 0.550381 12 0.689705L0.439695 12.25C0.299801 12.3888 0.188889 12.554 0.113407 12.736C0.0379245 12.9181 -0.000621974 13.1133 7.58901e-06 13.3103V17.5C7.58901e-06 17.8978 0.158043 18.2794 0.439347 18.5607C0.720652 18.842 1.10218 19 1.50001 19H17.25C17.4489 19 17.6397 18.921 17.7803 18.7803C17.921 18.6397 18 18.4489 18 18.25C18 18.0511 17.921 17.8603 17.7803 17.7197C17.6397 17.579 17.4489 17.5 17.25 17.5H7.81126L18.3113 7.00002C18.4506 6.86073 18.5611 6.69535 18.6365 6.51334C18.7119 6.33133 18.7507 6.13625 18.7507 5.93924C18.7507 5.74222 18.7119 5.54714 18.6365 5.36513C18.5611 5.18312 18.4506 5.01775 18.3113 4.87846ZM9.75001 5.06033L11.3147 6.62502L3.37501 14.5647L1.81032 13L9.75001 5.06033ZM1.50001 17.5V14.8103L4.18969 17.5H1.50001ZM6.00001 17.1897L4.43626 15.625L12.375 7.68533L13.9397 9.25002L6.00001 17.1897ZM15 8.18971L10.8113 4.00002L13.0613 1.75002L17.25 5.93971L15 8.18971Z' fill='%23343E7A'/%3e%3c/svg%3e") no-repeat left;
             }
         }
 
@@ -1207,7 +1226,11 @@
 .section-news {
     .wrap-news {
         display: flex;
-        gap: 25px;
+        align-items: center;
+
+        @media (min-width:992px) {
+            gap: 25px;
+        }
 
         .content {
             width: 100%;
@@ -1219,12 +1242,18 @@
             }
         }
 
+        .details {
+            img {
+                object-fit: contain;
+            }
+        }
+
         .siderbar-news,
         .top-siderbar-news {
             width: 33%;
 
             @media (min-width:992px) {
-                min-width: 400px;
+                min-width: 280px;
             }
 
             .box-side {
@@ -1249,6 +1278,42 @@
 
             }
         }
+
+        .link-share {
+            display: flex;
+            justify-content: end;
+            position: relative;
+            align-items: center;
+            gap: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                background: #CACACA;
+                height: 1px;
+                width: 100%;
+            }
+
+            span {
+                white-space: nowrap;
+            }
+
+            ul {
+                display: flex;
+                gap: 10px;
+
+                li {
+                    display: inline-block;
+                    min-width: 35px
+                }
+            }
+        }
+    }
+
+    .cat-menu {
+        border-bottom: 1px solid #C2C2C2;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .top-news {
@@ -1262,12 +1327,17 @@
             margin-bottom: 0 !important;
         }
 
-        @media (max-width:1200px) {
-            margin-bottom: 0;
+        @media (max-width:767px) {
+            margin-bottom: 20px;
         }
 
         .box-news {
             display: block;
+        }
+
+        .right-content {
+            padding: 0;
+            margin-top: 15px;
         }
 
         @media (max-width:1200px) {
@@ -1282,12 +1352,16 @@
             }
         }
 
+        .title-news {
+            font-size: 24px;
+        }
+
         .thumb-art {
             width: 100%;
 
             @media (min-width:992px) {
                 .thumb.thumb-news {
-                    padding-bottom: 440px;
+                    padding-bottom: 350px;
                 }
             }
 
@@ -1330,6 +1404,35 @@
         //     }
         // }
 
+    }
+
+    .next-news {
+        .box-news {
+            display: block;
+        }
+
+        .thumb-art {
+            width: 100%;
+
+            @media (min-width:992px) {
+                .thumb.thumb-news {
+                    padding-bottom: 150px;
+                }
+            }
+        }
+
+        .right-content {
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        @media (min-width:992px) {
+
+            .description,
+            .xemthem {
+                display: none;
+            }
+        }
     }
 
     .form-search {
@@ -1390,7 +1493,7 @@
     .list-news {
         @media (max-width:1200px) {
             .item-news {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
             }
         }
 
@@ -1410,9 +1513,12 @@
     .list-news-top {
         @media (max-width:991px) {
             display: block;
+            margin-bottom: 20px;
         }
 
-
+        display: flex;
+        gap: 24px;
+        margin-bottom: 25px;
     }
 
     .list-cat {
@@ -1420,8 +1526,10 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 25px;
-        margin-bottom: 25px;
 
+        @media (max-width:991px) {
+            margin-bottom: 15px;
+        }
     }
 
     .top-siderbar-news {
@@ -1472,7 +1580,7 @@
         .box-side {
             .title {
                 position: relative;
-                padding: 10px;
+                padding: 0 10px;
                 margin-bottom: 15px;
 
                 &::after {
@@ -1490,32 +1598,35 @@
 
             .list-news {
                 .item-news {
-                    @media (max-width:1200px) {
-                        .box-news {
-                            grid-template-columns: repeat(1, 1fr);
-                        }
+                    .box-news {
+                        display: flex;
+                    }
+
+                    .title-news {
+                        font-weight: normal;
                     }
 
                     margin-bottom: 15px;
 
 
                     .right-content {
-                        padding: 10px;
+                        padding: 0 10px;
                     }
 
                     .thumb-art {
-                        width: 45%;
-                        min-width: 45%;
+                        width: 120px;
+                        min-width: 120px;
 
-                        @media (max-width:1200px) {
-                            width: 100%;
-                            min-width: 100%;
-                        }
+                    }
+
+                    .flex-cat {
+                        display: none;
                     }
 
                     .cat-tag,
                     .xemthem,
-                    .description {
+                    .description,
+                    .time {
                         display: none;
                     }
                 }
@@ -1527,35 +1638,38 @@
                 .item-product {
                     padding: 0;
                     margin-bottom: 15px;
+                    background: none;
 
                     a {
                         display: flex;
 
-                        @media (max-width:1200px) {
-                            flex-wrap: wrap;
-                        }
                     }
 
                     .box-thumb {
-                        width: 45%;
-                        min-width: 45%;
+                        width: 120px;
+                        min-width: 120px;
 
-                        @media (max-width:1200px) {
-                            width: 100%;
-                        }
                     }
 
                     .name-product {
                         font-size: 16px;
-                        font-weight: 700;
+                        font-weight: 500;
                     }
 
                     .review {
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
+
                         gap: 2px;
                         color: #919191;
                         font-size: 13px;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
 
                         .icon {
                             width: 12px;
@@ -1573,12 +1687,14 @@
                     .flex-price {
                         justify-content: start;
                         align-items: center;
+                        margin-top: 0;
 
                         .price-old {
                             margin: 0;
                             font-size: 13px;
                             color: #919191;
                             text-decoration: line-through;
+                            display: none;
                         }
 
                         .percent {
@@ -1592,7 +1708,7 @@
                 }
 
                 .box-info {
-                    padding: 15px;
+                    padding: 0 10px;
 
                     .name-product {
                         margin-top: 0;
@@ -1874,6 +1990,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
 
         @media (max-width:767px) {
             flex-wrap: wrap;
@@ -1889,6 +2006,10 @@
                 font-weight: 400;
                 line-height: 48px;
                 margin-bottom: 10px;
+
+                @media (max-width:992px) {
+                    font-size: 36px;
+                }
             }
 
             .sub-title {
@@ -1896,6 +2017,12 @@
                 font-weight: 700;
                 line-height: 24px;
                 text-transform: uppercase;
+            }
+        }
+
+        @media (min-width:992px) {
+            .image {
+                min-width: 500px;
             }
         }
     }
@@ -2639,6 +2766,8 @@
             }
         }
     }
+
+
 }
 
 .section-description-product {
@@ -4049,6 +4178,54 @@
                 &::before {
                     background: #343E7A;
                 }
+            }
+        }
+    }
+}
+
+.form-donggop {
+    background: #FCFCFC;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 615px;
+    margin-top: 30px;
+
+    label {
+        color: #1F2549;
+    }
+
+    .action {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+
+        .btn {
+            background: #343E7A;
+            color: #fcfcfc;
+            padding: 0 20px;
+            width: 100%;
+
+            &.back {
+                background: none;
+                color: #1F2549;
+            }
+        }
+    }
+
+    @media (min-width: 767px) {
+        padding: 15px;
+
+        .form-group {
+            display: flex;
+
+            label {
+                min-width: 160px;
+            }
+
+            .box-input {
+                width: 100%;
             }
         }
     }

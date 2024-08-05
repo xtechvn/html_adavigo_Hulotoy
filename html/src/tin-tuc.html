@@ -1,6 +1,6 @@
 <section class="section-news">
     <div class="container">
-        <div class="wrap-news">
+        <div class="wrap-news cat-menu">
             <div class="content">
                 <ul class="list-cat">
                     <li> <a href="" class="cat-tag">Tất cả</a></li>
@@ -15,11 +15,7 @@
                         <button type="button" class="btn-search"><i class="icon icon-search"></i></button>
                     </form>
                 </div>
-                <div class="list-news-top list-news">
-                    <div class="top-news">
-                        @@include('partial/item-news.html')
-                    </div>
-                </div>
+
             </div>
             <div class="top-siderbar-news">
                 <div class="form-search">
@@ -28,14 +24,19 @@
                         <button type="button" class="btn-search"><i class="icon icon-search"></i></button>
                     </form>
                 </div>
-                <div class="list-news">
-                    @@include('partial/item-news.html')
-                    @@include('partial/item-news.html')
-                </div>
             </div>
         </div>
         <div class="wrap-news">
             <div class="content">
+                <div class="list-news-top list-news">
+                    <div class="top-news">
+                        @@include('partial/item-news.html')
+                    </div>
+                    <div class="next-news">
+                        @@include('partial/item-news.html')
+                        @@include('partial/item-news.html')
+                    </div>
+                </div>
                 <div class="list-news">
                     @@include('partial/item-news.html')
                     @@include('partial/item-news.html')
