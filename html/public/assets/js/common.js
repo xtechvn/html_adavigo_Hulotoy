@@ -80,9 +80,9 @@ $(function () {
     $('.btn-filter').on('click', function () {
         $('#productList').addClass('show-filter');
     });
-    // $('#closeFilter').on('click', function () {
-    //     $('#productList').removeClass('show-filter');
-    // });
+    $('#closeFilter').on('click', function () {
+        $('#productList').removeClass('show-filter');
+    });
     $('.list-tab-menu .sub-menu').on('click', function () {
         $(this).toggleClass('active');
     });

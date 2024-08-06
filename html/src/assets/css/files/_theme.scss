@@ -442,7 +442,7 @@
         gap: 25px;
 
         .left-sidebar {
-            width: 260px;
+            width: 220px;
 
             @media (max-width:1200px) {
                 position: fixed;
@@ -571,6 +571,11 @@
                         display: flex;
                         gap: 5px;
 
+                        .icon {
+                            width: 18px;
+                            height: 18px;
+                        }
+
                         &.star1 {
                             .icon {
 
@@ -659,6 +664,16 @@
 
     .product-category {
         width: calc(100% - 260px);
+
+        .wrap-paging .pagination {
+            justify-content: center
+        }
+
+        @media (min-width:1200px) {
+            .list-product {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
 
         @media (max-width:1200px) {
             width: 100%;
@@ -1450,12 +1465,12 @@
         input {
             width: 100%;
             background: #FCFCFC;
+            border: 1px solid #AEB2CA;
             padding: 4px 80px 4px 24px;
             font-size: 16px;
             height: 48px;
             line-height: 48px;
             color: #1F2549;
-            border: none;
             outline: none;
             border-radius: 24px;
 
@@ -1514,6 +1529,9 @@
     }
 
     .list-news-top {
+        border-bottom: 1px solid #C2C2C2;
+        padding-bottom: 20px;
+
         @media (max-width:991px) {
             display: block;
             margin-bottom: 20px;
@@ -1876,7 +1894,7 @@
         min-width: 150px;
         text-align: center;
         color: #FD5023;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: bold;
 
         @media (max-width:1200px) {
@@ -2151,11 +2169,13 @@
     }
 
     .list-faq {
+        background: #FCFCFC;
+        border-radius: 10px;
+
         li {
             a {
-                background: #FCFCFC;
+
                 padding: 10px;
-                border-radius: 10px;
                 display: block;
 
             }
@@ -2163,6 +2183,7 @@
             &.active {
                 a {
                     background: #D9DFFF;
+                    border-radius: 10px;
                     font-weight: bold;
 
                     &::after {
@@ -2475,6 +2496,7 @@
         justify-content: space-between;
         background: #FCFCFC;
         padding: 15px;
+        border-radius: 16px;
 
         @media (max-width:767px) {
             flex-wrap: wrap;
@@ -2810,7 +2832,7 @@
             background: #FCFCFC;
             padding: 15px;
             border-radius: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
             .title {
                 font-weight: bold;
@@ -2819,16 +2841,6 @@
 
             @media (max-width:767px) {
                 margin-bottom: 20px;
-            }
-
-            .wrap-paging {
-                margin: 25px auto;
-                padding-top: 25px;
-                border-top: 1px solid #C2C2C2;
-
-                .pagination {
-                    justify-content: center;
-                }
             }
 
             .overview {
@@ -3021,6 +3033,14 @@
                         }
                     }
                 }
+            }
+        }
+
+        .wrap-paging {
+            margin: 25px auto;
+
+            .pagination {
+                justify-content: center;
             }
         }
 
@@ -3351,9 +3371,6 @@
 }
 
 .section-qly-taikhoan {
-    .container {
-        max-width: 1400px;
-    }
 
     .box-quanlytaikhoan {
         display: flex;
@@ -3381,6 +3398,29 @@
 
         .content-left-user {
             width: 76%;
+
+            .wrap-paging .pagination {
+                justify-content: center;
+            }
+
+            .wrap-order-details {
+                >.action {
+                    margin-bottom: 20px;
+                    display: block;
+                    margin-left: auto;
+
+                    .btn {
+                        max-width: 200px;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+
+                        @media (max-width: 767px) {
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
 
             @media (max-width: 767px) {
                 width: 100%;
@@ -3457,6 +3497,7 @@
 
             .form-group {
                 display: flex;
+                align-items: center;
 
                 @media (max-width: 991px) {
                     flex-wrap: wrap;
@@ -3464,9 +3505,11 @@
 
                 >label {
                     width: 160px;
+                    margin-bottom: 0;
 
                     @media (max-width: 991px) {
                         width: 100%;
+                        margin-bottom: 5px;
                     }
                 }
 
@@ -3933,7 +3976,8 @@
                 border-top: 1px solid #D9DFFF;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: end;
 
                 @media (max-width:991px) {
                     gap: 20px;
@@ -3941,10 +3985,14 @@
                 }
 
                 .action {
-                    margin-top: 0;
+                    margin-top: 15px;
+                    order: 2;
 
                     .btn {
                         padding: 0 20px;
+                        max-width: 200px;
+                        margin-left: auto;
+                        margin-bottom: 10px;
 
                         &.btn-line {
                             border: 1px solid #1F2549;
@@ -3954,6 +4002,8 @@
 
                 .total-price {
                     color: #242424;
+                    width: 100%;
+                    text-align: right;
                 }
 
                 .number-price {
@@ -3987,10 +4037,9 @@
                     .info {
                         padding-right: 120px;
 
-                        @media (max-width: 400px) {
-                            .name-product {
-                                font-size: 16px;
-                            }
+                        .name-product {
+                            font-size: 16px;
+                            font-weight: normal;
                         }
 
                         @media (max-width:991px) {
@@ -4116,9 +4165,6 @@
                 position: relative;
                 font-size: 13px;
 
-                @media (min-width: 400px) {
-                    font-size: 10px;
-                }
 
                 @media (max-width: 400px) {
                     font-size: 9px;
