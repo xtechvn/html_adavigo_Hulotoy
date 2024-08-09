@@ -434,7 +434,7 @@ button,
         // border-radius: 16px;
         // box-shadow: 4px 0px 8px 0px #3629B714;
 
-        @media (max-width:1200px) {
+        @media (max-width:991px) {
             margin-bottom: 0;
         }
 
@@ -446,7 +446,7 @@ button,
             display: flex;
             align-items: start;
 
-            @media (max-width:1200px) {
+            @media (max-width:991px) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -464,7 +464,7 @@ button,
             overflow: hidden;
             min-width: calc(100%/3);
 
-            @media (max-width:1200px) {
+            @media (max-width:991px) {
                 width: 100%;
             }
         }
@@ -500,12 +500,13 @@ button,
             @media (max-width:991px) {
                 -webkit-line-clamp: inherit;
             }
+
         }
 
         .right-content {
             padding-left: 20px;
 
-            @media (max-width:1680px) {
+            @media (max-width:991px) {
                 padding-left: 0;
                 padding-top: 15px;
             }

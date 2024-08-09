@@ -1425,6 +1425,11 @@
     }
 
     .next-news {
+        @media (max-width:991px) and (min-width:768px) {
+            min-width: 250px;
+            width: 250px;
+        }
+
         .box-news {
             display: block;
         }
@@ -1444,13 +1449,14 @@
             margin-top: 15px;
         }
 
-        @media (min-width:992px) {
+        @media (min-width:768px) {
 
             .description,
             .xemthem {
                 display: none;
             }
         }
+
     }
 
     .form-search {
@@ -1532,7 +1538,7 @@
         border-bottom: 1px solid #C2C2C2;
         padding-bottom: 20px;
 
-        @media (max-width:991px) {
+        @media (max-width:767px) {
             display: block;
             margin-bottom: 20px;
         }
@@ -1540,6 +1546,10 @@
         display: flex;
         gap: 24px;
         margin-bottom: 25px;
+
+        @media (max-width:991px) and (min-width:768px) {
+            display: flex;
+        }
     }
 
     .list-cat {
@@ -1592,6 +1602,8 @@
                         display: none;
                     }
                 }
+
+
             }
 
         }
@@ -1650,6 +1662,8 @@
                     .time {
                         display: none;
                     }
+
+
                 }
             }
 
