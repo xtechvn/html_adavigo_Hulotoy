@@ -2230,6 +2230,53 @@
             }
         }
     }
+
+    .list-faq-v2 {
+        .item {
+            .title-faq {
+                color: #343E7A;
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                cursor: pointer;
+                position: relative;
+                padding-left: 30px;
+
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    display: block;
+                    position: absolute;
+                    left: 5px;
+                    top: 5px;
+                    border-right: 1px solid #343E7A;
+                    border-bottom: 1px solid #343E7A;
+                    transform: rotate(-45deg);
+                    transition: all 0.4s ease-in;
+                }
+
+                &:not(:last-of-type) {
+                    margin-bottom: 15px;
+                }
+
+                &.active {
+                    &::before {
+                        transform: rotate(45deg);
+                        transition: all 0.4s ease-in;
+                        top: 3px;
+                    }
+
+                }
+            }
+
+            .answer {
+                display: none;
+            }
+
+        }
+
+    }
 }
 
 .cart-empty {
@@ -4291,5 +4338,52 @@
                 width: 100%;
             }
         }
+    }
+}
+
+.section-404 {
+    min-height: calc(100vh - 150px);
+    padding: 70px 0;
+    text-align: center;
+
+    @media (max-width:991px) {
+        padding: 40px 0;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    h2,
+    p {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        min-width: 280px;
+        margin: 0 5px 10px;
+    }
+}
+
+.form-noti {
+    text-align: center;
+    font-weight: normal;
+    color: #616161;
+
+    img {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #1F2549;
+    }
+
+    .btn {
+        margin-top: 10px;
+        min-width: 100px;
     }
 }

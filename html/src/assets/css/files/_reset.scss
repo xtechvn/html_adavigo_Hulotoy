@@ -82,6 +82,12 @@ button,
         background: #343E7A;
         color: #FCFCFC;
     }
+
+    &.btn-line {
+        border: 1px solid #343E7A;
+        background: none;
+        color: #343E7A;
+    }
 }
 
 .container {
@@ -487,11 +493,11 @@ button,
             font-size: 16px;
             color: #616161;
             margin-top: 10px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            word-break: break-word;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 3;
+            // word-break: break-word;
+            // overflow: hidden;
+            // -webkit-box-orient: vertical;
 
             @media (max-width:1680px) {
                 -webkit-line-clamp: 2;

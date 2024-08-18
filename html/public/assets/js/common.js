@@ -173,3 +173,22 @@ $(function () {
         return false;
     });
 });
+
+// hỗ trợ
+$(document).ready(function () {
+    $(".list-faq-v2 .item > .title-faq").on("click", function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this)
+                .siblings(".answer")
+                .slideUp(300);
+        } else {
+            $(".list-faq-v2 .item > .title-faq").removeClass("active");
+            $(this).addClass("active");
+            $(".answer").slideUp(300);
+            $(this)
+                .siblings(".answer")
+                .slideDown(300);
+        }
+    });
+});
