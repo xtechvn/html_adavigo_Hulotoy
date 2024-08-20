@@ -417,4 +417,104 @@
         }
     }
 
+    .menu-cart {
+        position: relative;
+
+        .box-cart {
+            position: absolute;
+            width: 420px;
+            right: -150px;
+            max-width: 420px;
+            background: #FCFCFC;
+            box-shadow: 4px 0px 8px 0px #3629B714;
+            padding: 20px 20px 10px;
+            border-radius: 16px;
+            z-index: 9;
+            color: #1F2549;
+            text-align: left;
+            display: none;
+            top: 100%;
+            font-size: 13px;
+
+            a {
+                color: #1F2549 !important;
+                text-align: left !important;
+            }
+
+            @media (max-width: 991px) {
+                right: -50px;
+            }
+
+            @media (max-width:767px) {
+                text-align: center;
+                width: 320px;
+                max-width: 320px;
+                right: -50px;
+                padding: 10px;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            .list-cart {
+                .item {
+                    margin-bottom: 10px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    position: relative;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .thumb-cart {
+                        width: 40px;
+                        min-width: 40px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                    }
+
+                    .des {
+                        font-size: 13px;
+                        color: #332F3B;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        word-break: break-word;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+
+                    }
+
+                    .price {
+                        color: #6610F2;
+                        font-size: 13px;
+                    }
+
+                }
+            }
+
+            .bottom-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                .btn {
+                    line-height: 40px !important;
+                    color: #fff !important;
+                }
+            }
+        }
+
+        &:hover {
+            .box-cart {
+                display: block;
+            }
+        }
+    }
 }
