@@ -93,8 +93,11 @@
 .item-product {
     background: #FCFCFC;
     padding: 10px;
+    height: 100%;
     border-radius: 16px;
     transition: all 0.5s ease-in-out;
+    position: relative;
+    padding-bottom: 65px;
 
     &:hover {
         box-shadow: 4px 0 8px 0 rgba(54, 41, 183, .0784313725);
@@ -127,6 +130,10 @@
         justify-content: space-between;
         margin-top: 10px;
         gap: 10px;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 35px;
 
         @media (max-width:767px) {
             flex-wrap: wrap;
@@ -168,6 +175,10 @@
         margin-top: 10px;
         align-items: center;
         gap: 5px;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
 
         .icon {
             width: 18px;
