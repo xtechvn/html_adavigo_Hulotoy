@@ -521,4 +521,55 @@
             }
         }
     }
+
+    .menu-user {
+        position: relative;
+
+        .box-user {
+            position: absolute;
+            width: 200px;
+            right: 0px;
+            max-width: 200px;
+            background: #FCFCFC;
+            box-shadow: 4px 0px 8px 0px #3629B714;
+            padding: 20px 20px 10px;
+            border-radius: 16px;
+            z-index: 9;
+            color: #1F2549;
+            text-align: left;
+            display: none;
+            top: 100%;
+            font-size: 13px;
+
+            a {
+                color: #1F2549 !important;
+                text-align: left !important;
+            }
+
+            .btn {
+                line-height: 28px !important;
+                height: 30px;
+                text-align: center !important;
+                width: 100%;
+            }
+
+            li a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 15px;
+
+                .icon {
+                    max-width: 24px;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        &:hover {
+            .box-user {
+                display: block;
+            }
+        }
+    }
 }

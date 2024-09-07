@@ -1358,6 +1358,7 @@
         position: relative;
         border-radius: 16px;
         overflow: hidden;
+        width: 100%;
 
         .item-news {
             margin-bottom: 0 !important;
@@ -1443,6 +1444,8 @@
     }
 
     .next-news {
+        width: 215px;
+
         @media (max-width:991px) and (min-width:768px) {
             min-width: 250px;
             width: 250px;
@@ -1473,6 +1476,10 @@
             .xemthem {
                 display: none;
             }
+        }
+
+        @media (max-width:767px) {
+            width: 100%;
         }
 
     }
