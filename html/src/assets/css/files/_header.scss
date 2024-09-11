@@ -189,6 +189,7 @@
                             // border-radius: 0;
                             box-shadow: 4px 0 8px 0 rgba(54, 41, 183, .0784313725);
                             margin-bottom: 15px;
+                            padding-bottom: 15px;
 
                             a {
                                 display: flex;
@@ -197,18 +198,65 @@
 
                             }
 
+                            .xemthem {
+                                font-size: 13px;
+                                color: #FD5023;
+                                font-weight: 400;
+                                line-height: 150%;
+                            }
+
                             .box-thumb {
-                                width: 100px;
-                                min-width: 100px;
-                                height: 100px;
+                                width: 60px;
+                                min-width: 60px;
+                                height: 60px;
+
+                                img {
+                                    border-radius: 4px;
+                                }
                             }
 
                             .name-product,
                             .flex-price,
                             .price-old {
                                 margin-top: 0;
+                                position: static;
                             }
 
+                        }
+
+                        .suggest {
+                            color: #1F2549;
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 150%;
+
+                            a {
+                                color: #1F2549;
+                            }
+
+                            .cat {
+                                color: #FCFCFC;
+                            }
+                        }
+                    }
+
+                    .list-news {
+                        padding-bottom: 13px;
+                        margin-bottom: 13px;
+                        border-bottom: 1px dashed #C2C2C2;
+
+                        li {
+                            padding: 6px 0;
+
+                            a {
+                                display: inline;
+
+                            }
+
+                            .cat {
+                                color: #FD5023 !important;
+                                margin-left: 10px;
+                            }
                         }
                     }
                 }

@@ -658,13 +658,11 @@ button,
 }
 
 .placeholder {
-
     position: relative;
     background: #222222;
     opacity: 0.1;
     animation: fading 1.5s infinite;
     border-radius: 4px;
-    font-size: 0 !important;
 }
 
 @keyframes fading {
