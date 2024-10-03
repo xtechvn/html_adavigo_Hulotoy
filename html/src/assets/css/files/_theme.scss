@@ -2975,6 +2975,10 @@
                     flex-wrap: wrap;
                 }
 
+                .overview__score-wrapper {
+                    white-space: nowrap;
+                }
+
                 .overview__briefing {
                     color: #FD5023;
                     text-align: center;
@@ -4875,4 +4879,20 @@
             }
         }
     }
+}
+
+.lg-toolbar .lg-icon {
+    background: none;
+}
+
+video {
+    max-width: 100%;
+}
+
+.vjs-loading-spinner,
+.vjs-big-play-button,
+.vjs-error-display,
+.vjs-modal-dialog,
+.vjs-control-bar {
+    display: none;
 }

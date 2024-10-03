@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
-    <link rel="stylesheet" href="assets/css/lightgallery.css">
+    <link rel="stylesheet" href="assets/css/lightgallery-bundle.css" />
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 
@@ -518,7 +518,7 @@
                                         <i class="icon icon-star"></i>
                                         <i class="icon icon-star"></i>
                                         <i class="icon icon-star"></i>
-                                        <i class="icon icon-star"></i>
+                                        <i class="icon half-star"></i>
                                     </div>
                                 </div>
                             </div>
@@ -566,10 +566,20 @@
                                             <img src="./assets/images/product.jpg" width="500" height="300" />
                                         </a>
 
-                                        <a href="./assets/images/product.jpg">
+                                        <a data-video='{"source": [{"src":"https://static-image.adavigo.com/uploads/videos/2024/10/dceeu5zi.otz.mp4", "type":"video/mp4"}],"attributes": {"preload": false, "controls": false}}'
+                                            data-poster="./assets/images/product.jpg">
                                             <img src="./assets/images/product.jpg" width="500" height="300" />
                                         </a>
 
+                                        <!-- <a data-lg-size="1280-720" data-pinterest-text="Pin it3"
+                                            data-tweet-text="lightGallery slide  4"
+                                            data-video='{"source": [{"src":"https://www.lightgalleryjs.com/videos/video1.mp4", "type":"video/mp4"}], "tracks": [{"src": "https://www.lightgalleryjs.com/videos/title.txt", "kind":"captions", "srclang": "en", "label": "English", "default": "true"}], "attributes": {"preload": false, "controls": true}}'
+                                            data-poster="https://www.lightgalleryjs.com/images/demo/html5-video-poster.jpg"
+                                            data-sub-html="<h4>'Peck Pocketed' by Kevin Herron | Disney Favorite</h4>">
+                                            <img class="img-responsive"
+                                                src="https://www.lightgalleryjs.com/images/demo/html5-video-poster.jpg"
+                                                width="300" />
+                                        </a> -->
                                     </div>
                                     <div class="reply-comment">
                                         <span class="time">2024-03-29 11:12</span>
@@ -968,8 +978,12 @@
     <script src="assets/js/jquery-ui.js"></script>
     <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/lightgallery.min.js"></script>
+    <!-- video lightgallery-->
+    <script src="assets/js/video.min.js"></script>
+    <script src="assets/js/lightgallery.umd.js"></script>
+    <script src="assets/js/lg-video.umd.js"></script>
+    <!-- end video lightgallery-->
     <script src="assets/js/lg-thumbnail.min.js"></script>
-    <script src="assets/js/lg-fullscreen.min.js"></script>
     <script src="assets/js/common.js"></script>
 
 </body>
