@@ -58,7 +58,10 @@ const swiperCAT = new Swiper('.category-slide', {
 const swiperFlash = new Swiper('.section-flashsale .product-slide', {
     loop: false,
     pagination: false,
-    navigation: false,
+    navigation: {
+        nextEl: '.section-flashsale .product-slide .swiper-button-next',
+        prevEl: '.section-flashsale .product-slide .swiper-button-prev',
+    },
     spaceBetween: 15,
     slidesPerView: 1.5,
     breakpoints: {
