@@ -30,9 +30,12 @@
         content: url('data:image/svg+xml,<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_dd_4142_31195)"><circle cx="18" cy="18" r="18" transform="matrix(1 -7.28523e-08 -1.04907e-07 -1 30 62)" fill="%23FCFCFC" fill-opacity="1"/><path opacity="1" fill-rule="evenodd" clip-rule="evenodd" d="M44.6 48.5998L46 49.9998L52 43.9998L46 37.9998L44.6 39.3998L49.2 43.9998L44.6 48.5998Z" fill="%231F2549"/></g><defs><filter id="filter0_dd_4142_31195" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="15"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0.211765 0 0 0 0 0.160784 0 0 0 0 0.717647 0 0 0 0.07 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4142_31195"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="4"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0.211765 0 0 0 0 0.160784 0 0 0 0 0.717647 0 0 0 0.08 0"/><feBlend mode="normal" in2="effect1_dropShadow_4142_31195" result="effect2_dropShadow_4142_31195"/><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_4142_31195" result="shape"/></filter></defs></svg>');
     }
 }
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
     display: none;
 }
+
 .section-banner {
     .swiper-banner {
         img {
@@ -2414,6 +2417,7 @@
             text-transform: uppercase;
             margin-bottom: 10px;
             padding-right: 75px;
+
             span {
                 display: inline-block;
                 width: 1px;
@@ -4936,4 +4940,114 @@ video {
 .vjs-modal-dialog,
 .vjs-control-bar {
     display: none;
+}
+
+.list-giaohang {
+    .item {
+        .title {
+            color: #343E7A;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                display: block;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                border-right: 1px solid #343E7A;
+                border-bottom: 1px solid #343E7A;
+                transform: rotate(-45deg);
+                transition: all 0.2s ease-in;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 15px;
+            }
+
+            &.active {
+                &::before {
+                    transform: rotate(45deg);
+                    transition: all 0.2s ease-in;
+                    top: 3px;
+                }
+
+            }
+        }
+
+        .answer {
+            display: none;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+                border-left: 2px solid transparent;
+                background: none;
+                margin-bottom: 8px;
+
+                &.active {
+                    border-left: 2px solid #858BAF;
+                    background: #F6F7FF;
+                }
+            }
+
+            .box-select-ship {
+
+
+                .name {
+                    color: #1F2549;
+
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 24px */
+                }
+
+                .des {
+                    color: #919191;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+
+                .price {
+                    color: #FD5023;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.select-bank {
+    .item {
+        margin-bottom: 15px;
+    }
+
+    .box-radio {
+        label {
+            display: flex;
+            gap: 7px;
+            align-items: center;
+
+            &::after {
+                top: 7px !important;
+            }
+        }
+
+    }
 }
